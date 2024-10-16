@@ -10,7 +10,7 @@ export enum ItemStatus {
 //   status: ItemStatus;
 // }
 
-export type CreateItem = Omit<Item, "id">
+export type CreateItem = Omit<Item, "id" | "status">;
 
 export type EditIem = CreateItem
 

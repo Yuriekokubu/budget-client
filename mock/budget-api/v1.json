@@ -5,7 +5,7 @@
       "amount": 3,
       "price": 555,
       "contactMobileNo": "0812345678",
-      "status": "PENDING",
+      "status": "REJECTED",
       "id": 1
     },
     {
@@ -13,7 +13,7 @@
       "amount": 6,
       "price": 750,
       "contactMobileNo": "0834567890",
-      "status": "PENDING",
+      "status": "REJECTED",
       "id": 3
     },
     {
@@ -21,7 +21,7 @@
       "amount": 2,
       "price": 1800,
       "contactMobileNo": "0845678901",
-      "status": "PENDING",
+      "status": "APPROVED",
       "id": 4
     },
     {
@@ -37,7 +37,7 @@
       "amount": 4,
       "price": 4500,
       "contactMobileNo": "0867890555",
-      "status": "PENDING",
+      "status": "APPROVED",
       "id": 6
     },
     {

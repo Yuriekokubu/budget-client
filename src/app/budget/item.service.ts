@@ -21,6 +21,7 @@ export class ItemService {
   }
 
   add(item: CreateItem) {
+    console.log('Add item payload:', item);
     return this.httpClient.post<Item>(this.URL, item);
   }
 

@@ -63,7 +63,7 @@ export class ItemFormComponent implements OnInit {
   }
 
   onSubmit(): void {
-    const item = { ...this.fg.getRawValue(), status: ItemStatus.PENDING };
+    const item = this.fg.getRawValue();
     if (this.id) {
       // If editing, call the edit method
       this.itemService.edit(this.id, item).subscribe(() => this.onBack());
