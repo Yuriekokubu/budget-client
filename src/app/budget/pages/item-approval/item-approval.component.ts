@@ -32,7 +32,7 @@ export class ItemApprovalComponent {
 
   constructor() {
     this.itemService.list().subscribe((vs) => {
-      this.items = vs;
+      this.items = vs.sort((a, b) => a.id - b.id);
       this.updateUsed();
     });
   }
@@ -52,7 +52,7 @@ export class ItemApprovalComponent {
 
         if (itemAction === 'Reject') {
           this.onReject(item.id);
-        }        
+        }
       }
     });
   }
@@ -74,9 +74,11 @@ export class ItemApprovalComponent {
   private updateUsed() {
     const used = this.items
       .filter((v) => v.status === ItemStatus.APPROVED)
-      .map((v) => v.price)
+      .map((v) => v.price * v.amount)
       .reduce((p, v) => (p += v), 0);
+
     this.budgetPlanService.updateUsed(used);
   }
+
 
 }
